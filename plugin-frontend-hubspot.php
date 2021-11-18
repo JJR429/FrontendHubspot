@@ -18,6 +18,7 @@ function func_load_vuescripts() {
     wp_register_script('wpvue_vuejs', 'https://cdn.jsdelivr.net/npm/vue/dist/vue.js');
     wp_register_script('vue_axios', 'https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js');
     wp_register_script('vue_codejs', plugin_dir_url( __FILE__ ).'includes/vuecode.js', 'wpvue_vuejs', true );
+    wp_register_style('formvuecss', plugin_dir_url( __FILE__ ).'includes/main.css');
    }
 add_action('wp_enqueue_scripts', 'func_load_vuescripts');
 
@@ -26,6 +27,8 @@ function form_hub_demo(){
   wp_enqueue_script('wpvue_vuejs');
   //Add Axios
   wp_enqueue_script('vue_axios');
+  //Add style
+  wp_enqueue_style( 'formvuecss' );
     //VueJs to handdle Form
   wp_enqueue_script('vue_codejs');
   //form
