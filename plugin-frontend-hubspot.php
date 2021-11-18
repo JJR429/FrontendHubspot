@@ -35,7 +35,7 @@ function form_hub_demo(){
     $response = '<form id="app" v-on:submit.prevent>
     <div class="form">
     <div class="row-flex">
-        <input type="text" placeholder="First name*" name="firstname" v-model="fields.firstname" v-on:blur="clearMessages">
+        <input class="name-input" type="text" placeholder="First name*" name="firstname" v-model="fields.firstname" v-on:blur="clearMessages">
         <input type="text" placeholder="Last name*" name="lastname" v-model="fields.lastname" v-on:blur="clearMessages">
     </div>
     <div class="row-flex">
